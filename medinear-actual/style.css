@@ -1,0 +1,847 @@
+
+/* ===============================
+   MEDINEAR - WARM MINIMAL THEME
+================================ */
+
+:root {
+    --primary: #F97316;
+    --primary-hover: #EA580C;
+    --primary-deep: #C2410C;
+
+    --background: #FFFBF7;
+    --surface: #FFFFFF;
+    --surface-soft: #FFF7ED;
+
+    --text: #1F2937;
+    --text-muted: #6B7280;
+
+    --border: #F1E5DA;
+
+    --radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    width: 100%;
+    min-height: 82px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo i {
+    color: var(--primary);
+}
+
+.nav-links,
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a,
+.pharmacist-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.nav-links a:hover,
+.pharmacist-link:hover {
+    color: var(--primary-deep);
+}
+
+.login-btn {
+    background: var(--primary);
+    color: var(--text);
+    border: none;
+    padding: 11px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: var(--primary-hover);
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 590px;
+    padding: 85px 10%;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--primary-deep);
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 4.5vw, 58px);
+    line-height: 1.18;
+    font-weight: 800;
+    letter-spacing: -2px;
+    max-width: 650px;
+}
+
+.hero h1 span {
+    color: var(--primary-deep);
+    display: block;
+}
+
+.hero-description {
+    max-width: 520px;
+    margin: 22px 0 30px;
+    font-size: 16px;
+    color: var(--text-muted);
+}
+
+
+/* SEARCH */
+
+.search-container {
+    max-width: 720px;
+    background: var(--surface);
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 12px 35px rgba(31, 41, 55, .06);
+}
+
+.search-field {
+    flex: 1;
+    min-width: 0;
+}
+
+.search-field label {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    letter-spacing: .5px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-wrapper i {
+    color: var(--primary-deep);
+}
+
+.input-wrapper input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--text);
+    background: transparent;
+}
+
+.input-wrapper input::placeholder {
+    color: #9CA3AF;
+}
+
+.search-divider {
+    height: 48px;
+    width: 1px;
+    background: var(--border);
+}
+
+.search-btn {
+    flex-shrink: 0;
+    padding: 15px 20px;
+    background: var(--primary);
+    color: var(--text);
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.search-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.hero-note {
+    margin-top: 18px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.hero-note i {
+    color: var(--primary-deep);
+    margin-right: 5px;
+}
+
+
+/* HERO VISUAL */
+
+.hero-visual {
+    position: relative;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-circle {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: var(--surface-soft);
+    border-radius: 50%;
+}
+
+.visual-decoration {
+    position: relative;
+    font-size: 150px;
+    color: var(--primary);
+    opacity: .85;
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 25px;
+    left: -5px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 18px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 12px 30px rgba(31, 41, 55, .08);
+}
+
+.floating-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: var(--surface-soft);
+    color: var(--primary-deep);
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+}
+
+.floating-card strong {
+    font-size: 13px;
+}
+
+.floating-card p {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+
+/* SECTION COMMON */
+
+.categories,
+.how-it-works {
+    padding: 75px 10%;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.section-heading p {
+    margin-top: 8px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+
+/* CATEGORIES */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    padding: 28px 20px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: var(--radius);
+    transition: .25s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(31, 41, 55, .07);
+    border-color: var(--primary);
+}
+
+.category-card i {
+    font-size: 25px;
+    color: var(--primary-deep);
+    margin-bottom: 18px;
+}
+
+.category-card h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.category-card p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+
+/* HOW IT WORKS */
+
+.how-it-works {
+    background: var(--surface-soft);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step-card {
+    background: var(--surface);
+    padding: 25px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.step-card span {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--primary-deep);
+}
+
+.step-card i {
+    display: block;
+    font-size: 27px;
+    color: var(--primary);
+    margin: 20px 0;
+}
+
+.step-card h3 {
+    font-size: 16px;
+}
+
+.step-card p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+
+/* PHARMACIST SECTION */
+
+.pharmacist-section {
+    margin: 80px 10%;
+    padding: 55px;
+    background: #FFF0E2;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.pharmacist-section h2 {
+    max-width: 600px;
+    font-size: 32px;
+    line-height: 1.3;
+}
+
+.pharmacist-section p {
+    max-width: 550px;
+    margin: 15px 0 25px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.pharmacist-cta {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    background: var(--primary);
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.pharmacist-icon {
+    font-size: 100px;
+    color: var(--primary-deep);
+    opacity: .8;
+}
+
+ 
+/* FOOTER */
+
+.footer {
+    padding: 50px 10%;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.footer > p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.footer-note {
+    max-width: 550px;
+    margin: 12px auto !important;
+}
+
+.copyright {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    margin-top: 30px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* =================================
+   MEDICINE SEARCH RESULTS
+================================= */
+
+.medicine-results {
+    display: none;
+    padding: 65px 10%;
+    background: var(--background);
+    scroll-margin-top: 30px;
+}
+
+.results-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.results-heading h2 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.results-heading p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.results-count {
+    color: var(--primary-deep);
+    background: var(--surface-soft);
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.results-list {
+    display: grid;
+    gap: 16px;
+}
+
+.result-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 25px rgba(31, 41, 55, .04);
+}
+
+.result-card h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.result-address {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-bottom: 14px;
+}
+
+.result-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.result-tags span {
+    background: var(--surface-soft);
+    color: var(--primary-deep);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.result-stock {
+    color: #15803D;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.result-stock.low {
+    color: #B45309;
+}
+
+.result-stock.out {
+    color: #DC2626;
+}
+
+.result-action {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.result-price {
+    display: block;
+    font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.result-action a {
+    display: inline-block;
+    background: var(--primary);
+    padding: 10px 16px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.result-action a:hover {
+    background: var(--primary-hover);
+}
+
+.empty-state {
+    display: none;
+    text-align: center;
+    padding: 45px 20px;
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+}
+
+.empty-state p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+@media (max-width: 650px) {
+
+    .medicine-results {
+        padding: 45px 6%;
+    }
+
+    .results-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .result-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .result-action {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid var(--border);
+        padding-top: 15px;
+    }
+
+    .result-price {
+        margin-bottom: 0;
+    }
+}
+
+/* =====================================
+   MEDINEAR - ADVANCED SEARCH FILTERS
+===================================== */
+
+.advanced-search {
+    flex-basis: 100%;
+    width: 100%;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+}
+
+.advanced-search summary {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: fit-content;
+    list-style: none;
+    color: var(--primary-deep);
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    user-select: none;
+}
+
+.advanced-search summary::-webkit-details-marker {
+    display: none;
+}
+
+.advanced-search summary i {
+    font-size: 13px;
+}
+
+.advanced-arrow {
+    margin-left: 4px;
+    transition: transform 0.2s ease;
+}
+
+.advanced-search[open] .advanced-arrow {
+    transform: rotate(180deg);
+}
+
+.advanced-search-fields {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    padding-top: 20px;
+    animation: filterReveal 0.25s ease;
+}
+
+.advanced-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.advanced-field label {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.advanced-field input,
+.advanced-field select {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    outline: none;
+    background: var(--background);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 12px;
+    transition: border-color 0.2s ease;
+}
+
+.advanced-field input:focus,
+.advanced-field select:focus {
+    border-color: var(--primary);
+}
+
+.advanced-field input::placeholder {
+    color: #9CA3AF;
+}
+
+@keyframes filterReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ADVANCED SEARCH RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .advanced-search-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+
+    .advanced-search-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .advanced-search {
+        padding-top: 15px;
+    }
+}
+
+/* =====================================
+   FIX: MEDINEAR SEARCH BAR ALIGNMENT
+===================================== */
+
+/* Allow search elements to wrap properly */
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Keep medicine and location fields aligned */
+
+.search-container > .search-field {
+    flex: 1 1 220px;
+    min-width: 0;
+}
+
+/* Keep the divider from shrinking */
+
+.search-container > .search-divider {
+    flex: 0 0 1px;
+}
+
+/* Keep the search button properly sized */
+
+.search-container > .search-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+/* Advanced search occupies a separate full row */
+
+.search-container > .advanced-search {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    margin-top: 2px;
+}
+
+/* Advanced filter alignment */
+
+.advanced-search-fields {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.advanced-field {
+    min-width: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .search-container {
+        align-items: stretch;
+    }
+
+    .search-container > .search-field {
+        flex: 1 1 100%;
+    }
+
+    .search-container > .search-divider {
+        display: none;
+    }
+
+    .search-container > .search-btn {
+        width: 100%;
+    }
+
+    .advanced-search-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .advanced-search-fields {
+        grid-template-columns: 1fr;
+    }
+}

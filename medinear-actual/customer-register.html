@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Registration | MediNear</title>
+
+    <link rel="stylesheet" href="customer-register.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="register-header">
+
+        <a href="index.html" class="register-logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span>MediNear</span>
+        </a>
+
+        <a href="login.html" class="back-login">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Login
+        </a>
+
+    </header>
+
+
+    <!-- REGISTRATION SECTION -->
+
+    <main class="register-main">
+
+        <section class="register-card">
+
+            <!-- LEFT PANEL -->
+
+            <div class="register-visual">
+
+                <span class="register-eyebrow">
+                    JOIN MEDINEAR
+                </span>
+
+                <h1>
+                    Healthcare discovery,
+                    <span>made simpler.</span>
+                </h1>
+
+                <p>
+                    Create your account to discover nearby pharmacies,
+                    check medicine availability and compare prices
+                    before visiting a store.
+                </p>
+
+                <div class="register-illustration">
+
+                    <div class="illustration-circle"></div>
+
+                    <i class="fa-solid fa-capsules"></i>
+
+                </div>
+
+                <div class="register-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <strong>Find pharmacies nearby</strong>
+                        <p>Discover reported medicine availability.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT PANEL -->
+
+            <div class="register-form-panel">
+
+                <div class="form-heading">
+
+                    <span class="register-eyebrow">
+                        CREATE YOUR ACCOUNT
+                    </span>
+
+                    <h2>Sign up to MediNear</h2>
+
+                    <p>Enter your details to get started.</p>
+
+                </div>
+
+
+                <form id="customer-register-form">
+
+                    <!-- FULL NAME -->
+
+                    <div class="register-field">
+
+                        <label for="full-name">Full name</label>
+
+                        <div class="register-input">
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="full-name"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                                minlength="2"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="register-field">
+
+                        <label for="register-email">Email address</label>
+
+                        <div class="register-input">
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="register-email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- MOBILE NUMBER -->
+
+                    <div class="register-field">
+
+                        <label for="mobile">Mobile number</label>
+
+                        <div class="register-input">
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="mobile"
+                                name="mobile"
+                                placeholder="Enter your 10-digit mobile number"
+                                autocomplete="tel"
+                                inputmode="numeric"
+                                pattern="[6-9][0-9]{9}"
+                                maxlength="10"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="register-field">
+
+                        <label for="register-password">Password</label>
+
+                        <div class="register-input">
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="register-password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="register-password"
+                                aria-label="Show password"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                        <span class="field-hint">
+                            Use at least 8 characters.
+                        </span>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="register-field">
+
+                        <label for="confirm-password">Confirm password</label>
+
+                        <div class="register-input">
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                name="confirmPassword"
+                                placeholder="Re-enter your password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="confirm-password"
+                                aria-label="Show password"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <div class="terms-row">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <label for="terms">
+                            I agree to the
+                            <a href="#" id="terms-link">Terms and Conditions</a>
+                            and Privacy Policy.
+                        </label>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <p id="register-message" class="register-message"
+                        role="status" aria-live="polite"></p>
+
+
+                    <!-- SUBMIT -->
+
+                    <button type="submit" class="create-account-btn">
+
+                        Create Account
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+
+                <!-- LOGIN LINK -->
+
+                <div class="existing-account">
+
+                    Already have an account?
+
+                    <a href="login.html">Log in</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="register-footer">
+        © 2026 MediNear. All rights reserved.
+    </footer>
+
+
+    <script src="customer-register.js"></script>
+
+</body>
+</html>

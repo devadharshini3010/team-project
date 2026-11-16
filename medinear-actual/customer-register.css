@@ -1,0 +1,460 @@
+
+/* =====================================
+   MEDINEAR CUSTOMER REGISTRATION
+   WARM MINIMAL THEME
+===================================== */
+
+:root {
+    --primary: #F97316;
+    --primary-hover: #EA580C;
+    --primary-deep: #C2410C;
+
+    --background: #FFFBF7;
+    --surface: #FFFFFF;
+    --surface-soft: #FFF7ED;
+
+    --text: #1F2937;
+    --text-muted: #6B7280;
+
+    --border: #F1E5DA;
+
+    --radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+/* HEADER */
+
+.register-header {
+    height: 76px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+}
+
+.register-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.register-logo i {
+    color: var(--primary);
+}
+
+.back-login {
+    color: var(--primary-deep);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.back-login i {
+    margin-right: 7px;
+}
+
+/* MAIN */
+
+.register-main {
+    width: 100%;
+    padding: 45px 8%;
+    display: flex;
+    justify-content: center;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 1180px;
+    min-height: 680px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(31, 41, 55, .05);
+}
+
+/* LEFT PANEL */
+
+.register-visual {
+    position: relative;
+    padding: 75px 55px;
+    background: var(--surface-soft);
+    overflow: hidden;
+}
+
+.register-eyebrow {
+    display: block;
+    color: var(--primary-deep);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+.register-visual h1 {
+    max-width: 430px;
+    font-size: clamp(30px, 3.2vw, 43px);
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+}
+
+.register-visual h1 span {
+    display: block;
+    color: var(--primary-deep);
+}
+
+.register-visual > p {
+    max-width: 430px;
+    margin-top: 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ILLUSTRATION */
+
+.register-illustration {
+    position: relative;
+    height: 260px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration-circle {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: #FFEBDD;
+}
+
+.register-illustration > i {
+    position: relative;
+    font-size: 115px;
+    color: var(--primary);
+}
+
+/* FEATURE CARD */
+
+.register-feature {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: fit-content;
+    padding: 15px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    box-shadow: 0 8px 25px rgba(31, 41, 55, .05);
+}
+
+.feature-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: var(--surface-soft);
+    color: var(--primary-deep);
+    border-radius: 10px;
+}
+
+.register-feature strong {
+    font-size: 12px;
+}
+
+.register-feature p {
+    color: var(--text-muted);
+    font-size: 10px;
+}
+
+/* RIGHT PANEL */
+
+.register-form-panel {
+    padding: 55px 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-heading {
+    margin-bottom: 27px;
+}
+
+.form-heading .register-eyebrow {
+    margin-bottom: 10px;
+}
+
+.form-heading h2 {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -.8px;
+}
+
+.form-heading p {
+    margin-top: 6px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* FORM */
+
+#customer-register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.register-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.register-field label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.register-input {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 0 13px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    transition: border-color .2s ease;
+}
+
+.register-input:focus-within {
+    border-color: var(--primary);
+}
+
+.register-input > i {
+    color: #9CA3AF;
+    font-size: 14px;
+}
+
+.register-input input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.register-input input::placeholder {
+    color: #A1A1AA;
+}
+
+.password-toggle {
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.field-hint {
+    color: var(--text-muted);
+    font-size: 10px;
+}
+
+/* TERMS */
+
+.terms-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 3px;
+}
+
+.terms-row input {
+    margin-top: 5px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.terms-row label {
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.terms-row a {
+    color: var(--primary-deep);
+    font-weight: 800;
+}
+
+/* MESSAGE */
+
+.register-message {
+    display: none;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.register-message.error {
+    display: block;
+    color: #B91C1C;
+    background: #FEF2F2;
+}
+
+.register-message.success {
+    display: block;
+    color: #15803D;
+    background: #F0FDF4;
+}
+
+/* BUTTON */
+
+.create-account-btn {
+    width: 100%;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--primary);
+    color: #1F2937;
+    border: none;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.create-account-btn:hover {
+    background: var(--primary-hover);
+}
+
+/* EXISTING ACCOUNT */
+
+.existing-account {
+    margin-top: 23px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.existing-account a {
+    color: var(--primary-deep);
+    font-weight: 800;
+    margin-left: 4px;
+}
+
+/* FOOTER */
+
+.register-footer {
+    padding: 22px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .register-main {
+        padding: 30px 5%;
+    }
+
+    .register-card {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .register-visual {
+        padding: 40px;
+    }
+
+    .register-illustration {
+        height: 180px;
+    }
+
+    .illustration-circle {
+        width: 165px;
+        height: 165px;
+    }
+
+    .register-illustration > i {
+        font-size: 85px;
+    }
+
+    .register-form-panel {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .register-header {
+        padding: 0 5%;
+        height: 68px;
+    }
+
+    .register-logo {
+        font-size: 21px;
+    }
+
+    .back-login {
+        font-size: 11px;
+    }
+
+    .register-main {
+        padding: 20px 4%;
+    }
+
+    .register-visual {
+        padding: 30px 25px;
+    }
+
+    .register-visual h1 {
+        font-size: 30px;
+    }
+
+    .register-form-panel {
+        padding: 30px 23px;
+    }
+
+    .form-heading h2 {
+        font-size: 24px;
+    }
+}

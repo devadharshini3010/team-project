@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediNear | Find Your Medicine Nearby</title>
+
+    <meta name="description"
+        content="Check medicine availability at pharmacies near your area before visiting the store.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span>MediNear</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="#pharmacist" class="pharmacist-link">
+                For Pharmacists
+            </a>
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    MEDICINES, CLOSER TO YOU
+                </span>
+
+                <h1>
+                    Find your medicine.
+                    <span>Find it nearby.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Check medicine availability, compare pharmacy prices
+                    and find nearby medical stores before stepping out.
+                </p>
+
+
+                <!-- MEDICINE SEARCH -->
+
+                
+<form class="search-container" id="medicine-search">
+
+    <!-- MEDICINE NAME -->
+
+    <div class="search-field">
+        <label for="medicine">
+            MEDICINE NAME / COMPOSITION
+        </label>
+
+        <div class="input-wrapper">
+            <i class="fa-solid fa-capsules"></i>
+
+            <input
+                type="text"
+                id="medicine"
+                placeholder="e.g. Paracetamol, Cetirizine"
+                required
+            >
+        </div>
+    </div>
+
+    <div class="search-divider"></div>
+
+    <!-- LOCATION -->
+
+    <div class="search-field">
+        <label for="area">
+            YOUR AREA / LOCALITY
+        </label>
+
+        <div class="input-wrapper">
+            <i class="fa-solid fa-location-dot"></i>
+
+            <input
+                type="text"
+                id="area"
+                placeholder="Enter your area"
+                required
+            >
+        </div>
+    </div>
+
+    <!-- SEARCH BUTTON -->
+
+    <button type="submit" class="search-btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        Check Availability
+    </button>
+
+    <!-- EXPANDABLE ADVANCED FILTERS -->
+
+    <details class="advanced-search">
+
+        <summary>
+            <i class="fa-solid fa-sliders"></i>
+            Advanced Search
+            <i class="fa-solid fa-chevron-down advanced-arrow"></i>
+        </summary>
+
+        <div class="advanced-search-fields">
+
+            <!-- BRAND NAME -->
+
+            <div class="advanced-field">
+                <label for="brand">BRAND NAME (OPTIONAL)</label>
+
+                <input
+                    type="text"
+                    id="brand"
+                    placeholder="e.g. Dolo, Crocin"
+                >
+            </div>
+
+            <!-- STRENGTH -->
+
+            <div class="advanced-field">
+                <label for="strength">STRENGTH (OPTIONAL)</label>
+
+                <select id="strength">
+                    <option value="">Any strength</option>
+                    <option value="250 mg">250 mg</option>
+                    <option value="500 mg">500 mg</option>
+                    <option value="650 mg">650 mg</option>
+                    <option value="1 g">1 g</option>
+                    <option value="5 mg">5 mg</option>
+                    <option value="10 mg">10 mg</option>
+                    <option value="100 mg">100 mg</option>
+                </select>
+            </div>
+
+            <!-- DOSAGE FORM -->
+
+            <div class="advanced-field">
+                <label for="dosage-form">DOSAGE FORM (OPTIONAL)</label>
+
+                <select id="dosage-form">
+                    <option value="">Any form</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="Capsule">Capsule</option>
+                    <option value="Syrup">Syrup</option>
+                    <option value="Injection">Injection</option>
+                    <option value="Drops">Drops</option>
+                    <option value="Cream">Cream</option>
+                    <option value="Ointment">Ointment</option>
+                </select>
+            </div>
+
+        </div>
+
+    </details>
+
+</form>
+
+
+                   
+                      
+
+
+                <div class="hero-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Check availability before visiting the pharmacy.
+                </div>
+
+            </div>
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="hero-visual">
+
+                <div class="visual-circle"></div>
+
+                <div class="floating-card">
+
+                    <div class="floating-icon">
+                        <i class="fa-solid fa-prescription-bottle-medical"></i>
+                    </div>
+
+                    <div>
+                        <strong>Find medicines nearby</strong>
+                        <p>Discover available pharmacy stock.</p>
+                    </div>
+
+                </div>
+
+                <div class="visual-decoration">
+                    <i class="fa-solid fa-capsules"></i>
+                </div>
+
+            </div>
+
+        </section>
+
+<!-- MEDICINE SEARCH RESULTS -->
+
+<section class="medicine-results" id="medicine-results">
+
+    <div class="results-heading">
+        <div>
+            <span class="eyebrow">NEARBY PHARMACIES</span>
+            <h2>Medicine availability</h2>
+            <p id="results-summary">Search to discover nearby pharmacies.</p>
+        </div>
+
+        <span class="results-count" id="results-count"></span>
+    </div>
+
+    <div class="results-list" id="results-list"></div>
+
+    <div class="empty-state" id="empty-state">
+        <h3>No pharmacies found</h3>
+        <p>Try another medicine name or location.</p>
+    </div>
+
+</section>
+
+
+
+        <!-- CATEGORIES -->
+
+        <section class="categories">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">EXPLORE</span>
+
+                <h2>Search by category</h2>
+
+                <p>
+                    Find medicines across different healthcare categories.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <div class="category-card">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <h3>Fever</h3>
+                    <p>Fever-related medicines</p>
+                </div>
+
+                <div class="category-card">
+                    <i class="fa-solid fa-bandage"></i>
+                    <h3>Pain Relief</h3>
+                    <p>Pain management medicines</p>
+                </div>
+
+                <div class="category-card">
+                    <i class="fa-solid fa-wind"></i>
+                    <h3>Allergy</h3>
+                    <p>Allergy-related medicines</p>
+                </div>
+
+                <div class="category-card">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h3>General Health</h3>
+                    <p>Other healthcare products</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+
+        <section class="how-it-works" id="how-it-works">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">SIMPLE AND CONVENIENT</span>
+
+                <h2>How MediNear works</h2>
+
+                <p>
+                    Find your medicine before making the trip.
+                </p>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+                <div class="step-card">
+                    <span>01</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <h3>Search Medicine</h3>
+                    <p>Enter the medicine composition or brand name.</p>
+                </div>
+
+                <div class="step-card">
+                    <span>02</span>
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h3>Choose Your Area</h3>
+                    <p>Enter your locality to find nearby pharmacies.</p>
+                </div>
+
+                <div class="step-card">
+                    <span>03</span>
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h3>Check Availability</h3>
+                    <p>Compare available stock, prices and expiry details.</p>
+                </div>
+
+                <div class="step-card">
+                    <span>04</span>
+                    <i class="fa-solid fa-store"></i>
+                    <h3>Visit Pharmacy</h3>
+                    <p>Visit the physical store and purchase your medicine.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PHARMACIST SECTION -->
+
+        <section class="pharmacist-section" id="pharmacist">
+
+            <div>
+                <span class="eyebrow">FOR PHARMACISTS</span>
+
+                <h2>Bring your pharmacy closer to customers.</h2>
+
+                <p>
+                    Register your pharmacy, manage your inventory
+                    and help customers discover available medicines.
+                </p>
+
+                <a href="pharmacy-register.html" class="pharmacist-cta">
+                    Register Your Pharmacy
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="pharmacist-icon">
+                <i class="fa-solid fa-shop"></i>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer" id="about">
+
+        <a href="#home" class="logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span>MediNear</span>
+        </a>
+
+        <p>
+            Find your medicine. Find it nearby.
+        </p>
+
+        <p class="footer-note">
+            MediNear helps you check medicine availability
+            before visiting a pharmacy. Purchases happen
+            directly at the pharmacy.
+        </p>
+
+        <div class="copyright">
+            © 2026 MediNear. All rights reserved.
+        </div>
+
+    </footer>
+
+
+    
+    
+    <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | MediNear</title>
+
+    <link rel="stylesheet" href="auth.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="auth-navbar">
+
+        <a href="../index.html" class="auth-logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            MediNear
+        </a>
+
+        <a href="index.html" class="back-home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Home
+        </a>
+
+    </header>
+
+
+    <main class="auth-main">
+
+        <section class="login-layout">
+
+            <!-- LEFT VISUAL SECTION -->
+
+            <div class="auth-visual">
+
+                <span class="visual-label">
+                    YOUR MEDICINE, CLOSER TO YOU
+                </span>
+
+                <h1>
+                    Healthcare discovery,
+                    <span>made simpler.</span>
+                </h1>
+
+                <p>
+                    Find medicines, check pharmacy availability
+                    and discover medical stores near your area.
+                </p>
+
+                <div class="auth-illustration">
+
+                    <div class="illustration-circle"></div>
+
+                    <i class="fa-solid fa-capsules capsule-visual"></i>
+
+                    <div class="visual-info-card">
+
+                        <i class="fa-solid fa-store"></i>
+
+                        <div>
+                            <strong>Nearby pharmacies</strong>
+                            <span>Check medicine availability</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="visual-footer">
+                    Find your medicine. Find it nearby.
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT LOGIN SECTION -->
+
+            <div class="auth-form-section">
+
+                <div class="auth-card">
+
+                    <div class="mobile-logo auth-logo">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        MediNear
+                    </div>
+
+                    <span class="eyebrow">WELCOME BACK</span>
+
+                    <h2>Login to MediNear</h2>
+
+                    <p class="form-description">
+                        Access your account to continue.
+                    </p>
+
+
+                    <!-- ACCOUNT TYPE -->
+
+                    <div class="account-selector">
+
+                        <button type="button"
+                            class="account-option active"
+                            data-role="customer">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <span>Customer</span>
+
+                        </button>
+
+
+                        <button type="button"
+                            class="account-option"
+                            data-role="pharmacist">
+
+                            <i class="fa-solid fa-store"></i>
+
+                            <span>Pharmacist</span>
+
+                        </button>
+
+                    </div>
+
+
+                    <form id="login-form">
+
+                        <input type="hidden"
+                            id="account-role"
+                            value="customer">
+
+
+                        <div class="form-group">
+
+                            <label for="login-email">
+                                Email address
+                            </label>
+
+                            <div class="form-input">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="login-email"
+                                    placeholder="Enter your email address"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <div class="label-row">
+
+                                <label for="login-password">
+                                    Password
+                                </label>
+
+                        
+                            </div>
+
+
+                            <div class="form-input">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="login-password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                                <button type="button"
+                                    class="password-toggle"
+                                    data-target="login-password"
+                                    aria-label="Show password">
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="remember-row">
+
+                            <label>
+                                <input type="checkbox" id="remember-me">
+                                Remember me
+                            </label>
+
+                        </div>
+
+
+                        <button type="submit" class="auth-submit">
+
+                            Login to your account
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <div id="login-message"
+                            class="form-message"
+                            role="status"
+                            aria-live="polite">
+                        </div>
+
+                    </form>
+
+
+                    <div class="auth-divider">
+                        <span>New to MediNear?</span>
+                    </div>
+
+
+                    <p class="register-prompt">
+                        <a href="pharmacy-register.html">
+                            Register your pharmacy
+                        </a>
+                    </p>
+
+
+                    <p class="customer-note">
+                        Looking to create a customer account?
+                        <a href="customer-register.html" class="signup-link">
+                        sign up
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="auth.js"></script>
+
+</body>
+</html>

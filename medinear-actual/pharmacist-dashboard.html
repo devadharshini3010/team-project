@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pharmacist Dashboard | MediNear</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-capsules"></i>
+                </div>
+                <span>Medi<span>Near</span></span>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="sidebar-heading">WORKSPACE</p>
+
+                <a href="#" class="nav-link active">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#inventory" class="nav-link">
+                    <i class="fa-solid fa-pills"></i>
+                    <span>My Inventory</span>
+                </a>
+
+                <a href="#add-medicine" class="nav-link">
+                    <i class="fa-solid fa-plus-circle"></i>
+                    <span>Add Medicine</span>
+                </a>
+
+                <a href="#pharmacy-profile" class="nav-link">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Pharmacy Profile</span>
+                </a>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="sidebar-heading">PREFERENCES</p>
+
+                <a href="#settings" class="nav-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-help">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <div>
+                        <strong>Need help?</strong>
+                        <p>Contact MediNear support</p>
+                    </div>
+                </div>
+
+                <a href="login.html" class="nav-link logout-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div class="topbar-left">
+                    <p class="welcome-label">PHARMACIST WORKSPACE</p>
+                    <h1>Dashboard</h1>
+                    <p class="topbar-description">
+                        Manage your pharmacy inventory and medicine availability.
+                    </p>
+                </div>
+
+                <div class="topbar-right">
+
+                    <button class="notification-btn" type="button" aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="profile-info">
+                        <div class="profile-avatar">P</div>
+                        <div>
+                            <strong>Pharmacist</strong>
+                            <p>Pharmacy Account</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PHARMACY STATUS -->
+            <section class="pharmacy-status">
+
+                <div class="status-icon">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+
+                <div class="status-details">
+                    <h3>Welcome to your pharmacy workspace</h3>
+                    <p>
+                        Your pharmacy inventory management starts here.
+                    </p>
+                </div>
+
+                <span class="status-badge">Demo Dashboard</span>
+
+            </section>
+
+
+            <!-- OVERVIEW CARDS -->
+            <section class="overview-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Inventory Overview</h2>
+                        <p>A quick overview of your medicine stock.</p>
+                    </div>
+
+                    <span class="date-label">
+                        <i class="fa-regular fa-calendar"></i>
+                        Stock Summary
+                    </span>
+                </div>
+
+
+                <div class="overview-grid">
+
+                    <div class="overview-card">
+                        <div class="card-top">
+                            <div class="card-icon orange-icon">
+                                <i class="fa-solid fa-pills"></i>
+                            </div>
+                        </div>
+                        <p>Total Medicines</p>
+                        <h3 id="totalMedicines">0</h3>
+                        <span>Medicines listed in inventory</span>
+                    </div>
+
+
+                    <div class="overview-card">
+                        <div class="card-top">
+                            <div class="card-icon green-icon">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                        <p>Available Stock</p>
+                        <h3 id="availablestock">0</h3>
+                        <span>Medicines currently in stock</span>
+                    </div>
+
+
+                    <div class="overview-card">
+                        <div class="card-top">
+                            <div class="card-icon yellow-icon">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                        </div>
+                        <p>Low Stock</p>
+                        <h3 id="lowstock">0</h3>
+                        <span>Medicines needing restocking</span>
+                    </div>
+
+
+                    <div class="overview-card">
+                        <div class="card-top">
+                            <div class="card-icon red-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                        </div>
+                        <p>Expiring Batches</p>
+                        <h3 id="expiringBatches">0</h3>
+                        <span>Batches approaching expiry</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- INVENTORY SECTION -->
+            <section class="inventory-section" id="inventory">
+
+                <div class="section-heading inventory-heading">
+
+                    <div>
+                        <h2>Medicine Inventory</h2>
+                        <p>View and manage the medicines listed by your pharmacy.</p>
+                    </div>
+
+                    <button class="add-medicine-btn" id="addMedicineBtn" type="button">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Medicine
+                    </button>
+
+                </div>
+
+
+                <!-- SEARCH AND FILTERS -->
+                <div class="inventory-toolbar">
+
+                    <div class="inventory-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="search"
+                            id="inventorySearch"
+                            placeholder="Search medicine or composition..."
+                        >
+                    </div>
+
+                    <select id="stockFilter">
+                        <option value="all">All Stock</option>
+                        <option value="available">Available</option>
+                        <option value="low">Low Stock</option>
+                        <option value="out">Out of Stock</option>
+                    </select>
+
+                </div>
+
+
+                <!-- INVENTORY TABLE -->
+                <div class="inventory-table-wrapper">
+
+                    <table class="inventory-table">
+
+                        <thead>
+                            <tr>
+                                <th>Medicine</th>
+                                <th>Composition</th>
+                                <th>Strength</th>
+                                <th>Dosage Form</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Expiry</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="inventoryTableBody">
+
+                            <tr class="empty-row">
+                                <td colspan="9">
+                                    <div class="empty-state">
+                                        <i class="fa-solid fa-box-open"></i>
+                                        <h3>No medicines added yet</h3>
+                                        <p>
+                                            Add your first medicine to start managing
+                                            your pharmacy inventory.
+                                        </p>
+                                        <button type="button" class="empty-add-btn" id="emptyAddBtn">
+                                            <i class="fa-solid fa-plus"></i>
+                                            Add Your First Medicine
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p class="inventory-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Keep medicine quantities and batch expiry information updated
+                    to provide accurate availability information to customers.
+                </p>
+
+            </section>
+
+            <footer class="dashboard-footer">
+                <p>© 2026 MediNear. Your medicine, closer to you.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+<!-- ADD MEDICINE MODAL -->
+
+<div class="modal-overlay" id="medicineModal">
+
+    <div class="medicine-modal">
+
+        <div class="modal-header">
+            <div>
+                <p class="modal-label">INVENTORY MANAGEMENT</p>
+                <h2>Add New Medicine</h2>
+                <p>Enter the medicine and batch information below.</p>
+            </div>
+
+            <button type="button" class="close-modal" id="closeMedicineModal">
+                &times;
+            </button>
+        </div>
+
+        <form id="medicineForm">
+
+            <div class="form-section">
+                <h3>Medicine Information</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="medicineName">Medicine Name *</label>
+                        <input type="text" id="medicineName" required
+                               placeholder="e.g. Dolo 650">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="brandName">Brand Name *</label>
+                        <input type="text" id="brandName" required
+                               placeholder="e.g. Micro Labs">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="composition">Composition *</label>
+                        <input type="text" id="composition" required
+                               placeholder="e.g. Paracetamol">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="strength">Strength *</label>
+                        <input type="text" id="strength" required
+                               placeholder="e.g. 650 mg">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dosageForm">Dosage Form *</label>
+                        <select id="dosageForm" required>
+                            <option value="">Select dosage form</option>
+                            <option value="Tablet">Tablet</option>
+                            <option value="Capsule">Capsule</option>
+                            <option value="Syrup">Syrup</option>
+                            <option value="Injection">Injection</option>
+                            <option value="Drops">Drops</option>
+                            <option value="Ointment">Ointment</option>
+                            <option value="Cream">Cream</option>
+                            <option value="Powder">Powder</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Batch and Stock Information</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="batchNumber">Batch Number *</label>
+                        <input type="text" id="batchNumber" required
+                               placeholder="Enter batch number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date *</label>
+                        <input type="date" id="expiryDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Available Quantity *</label>
+                        <input type="number" id="quantity" min="0" step="1"
+                               required placeholder="e.g. 100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="medicinePrice">Price (₹) *</label>
+                        <input type="number" id="medicinePrice" min="0"
+                               step="0.01" required placeholder="e.g. 30">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-message" id="medicineFormMessage"></div>
+
+            <div class="modal-actions">
+                <button type="button" class="cancel-btn" id="cancelMedicine">
+                    Cancel
+                </button>
+
+                <button type="submit" class="save-medicine-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add to Inventory
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+    <!-- Dashboard JavaScript -->
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

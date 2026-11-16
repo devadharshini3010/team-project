@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register Your Pharmacy | MediNear</title>
+
+    <link rel="stylesheet" href="auth.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="auth-navbar">
+
+        <a href="../index.html" class="auth-logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            MediNear
+        </a>
+
+        <a href="login.html" class="back-home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Already registered? Login
+        </a>
+
+    </header>
+
+
+    <main class="registration-main">
+
+        <div class="registration-heading">
+
+            <span class="eyebrow">
+                PHARMACY PARTNERSHIP
+            </span>
+
+            <h1>Bring your pharmacy closer to customers.</h1>
+
+            <p>
+                Register your pharmacy on MediNear and help customers
+                discover medicines available in your store.
+            </p>
+
+        </div>
+
+
+        <form id="pharmacy-form" class="registration-card">
+
+            <!-- SECTION 1 -->
+
+            <div class="registration-section">
+
+                <div class="section-title">
+
+                    <span class="section-number">01</span>
+
+                    <div>
+                        <h2>Pharmacy information</h2>
+                        <p>Tell us about your pharmacy.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group full-width">
+
+                        <label for="pharmacy-name">
+                            Pharmacy / Medical Store Name *
+                        </label>
+
+                        <input type="text"
+                            id="pharmacy-name"
+                            placeholder="Enter pharmacy name"
+                            maxlength="120"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="pharmacy-type">
+                            Pharmacy Type *
+                        </label>
+
+                        <select id="pharmacy-type" required>
+
+                            <option value="">Select type</option>
+                            <option value="retail">Retail Pharmacy</option>
+                            <option value="wholesale">Wholesale Pharmacy</option>
+                            <option value="hospital">Hospital Pharmacy</option>
+                            <option value="chain">Pharmacy Chain</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="pharmacy-phone">
+                            Pharmacy Contact Number *
+                        </label>
+
+                        <input type="tel"
+                            id="pharmacy-phone"
+                            placeholder="10-digit mobile number"
+                            inputmode="numeric"
+                            pattern="[6-9][0-9]{9}"
+                            maxlength="10"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group full-width">
+
+                        <label for="pharmacy-email">
+                            Pharmacy Email Address *
+                        </label>
+
+                        <input type="email"
+                            id="pharmacy-email"
+                            placeholder="pharmacy@example.com"
+                            required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECTION 2 -->
+
+            <div class="registration-section">
+
+                <div class="section-title">
+
+                    <span class="section-number">02</span>
+
+                    <div>
+                        <h2>Owner and pharmacist details</h2>
+                        <p>Provide the responsible person's information.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="owner-name">
+                            Owner's Full Name *
+                        </label>
+
+                        <input type="text"
+                            id="owner-name"
+                            placeholder="Enter owner's name"
+                            maxlength="100"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="pharmacist-name">
+                            Registered Pharmacist Name *
+                        </label>
+
+                        <input type="text"
+                            id="pharmacist-name"
+                            placeholder="Enter pharmacist name"
+                            maxlength="100"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="pharmacist-phone">
+                            Pharmacist Contact Number *
+                        </label>
+
+                        <input type="tel"
+                            id="pharmacist-phone"
+                            placeholder="10-digit mobile number"
+                            inputmode="numeric"
+                            pattern="[6-9][0-9]{9}"
+                            maxlength="10"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registration-number">
+                            Pharmacist Registration Number *
+                        </label>
+
+                        <input type="text"
+                            id="registration-number"
+                            placeholder="Enter registration number"
+                            maxlength="60"
+                            required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECTION 3 -->
+
+            <div class="registration-section">
+
+                <div class="section-title">
+
+                    <span class="section-number">03</span>
+
+                    <div>
+                        <h2>Pharmacy location</h2>
+                        <p>Help customers find your physical store.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group full-width">
+
+                        <label for="shop-address">
+                            Complete Shop Address *
+                        </label>
+
+                        <textarea
+                            id="shop-address"
+                            rows="3"
+                            placeholder="Door number, street, landmark..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="area">
+                            Area / Locality *
+                        </label>
+
+                        <input type="text"
+                            id="area"
+                            placeholder="Enter locality"
+                            maxlength="100"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="city">
+                            City *
+                        </label>
+
+                        <input type="text"
+                            id="city"
+                            placeholder="Enter city"
+                            maxlength="80"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="state">
+                            State *
+                        </label>
+
+                        <select id="state" required>
+
+                            <option value="">Select state</option>
+                            <option>Tamil Nadu</option>
+                            <option>Karnataka</option>
+                            <option>Kerala</option>
+                            <option>Andhra Pradesh</option>
+                            <option>Telangana</option>
+                            <option>Maharashtra</option>
+                            <option>Delhi</option>
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="pincode">
+                            PIN Code *
+                        </label>
+
+                        <input type="text"
+                            id="pincode"
+                            placeholder="6-digit PIN code"
+                            inputmode="numeric"
+                            pattern="[0-9]{6}"
+                            maxlength="6"
+                            required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECTION 4 -->
+
+            <div class="registration-section">
+
+                <div class="section-title">
+
+                    <span class="section-number">04</span>
+
+                    <div>
+                        <h2>Licence and verification</h2>
+                        <p>Submit the information required for verification.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group full-width">
+
+                        <label for="licence-number">
+                            Pharmacy Licence Number *
+                        </label>
+
+                        <input type="text"
+                            id="licence-number"
+                            placeholder="Enter pharmacy licence number"
+                            maxlength="100"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group full-width">
+
+                        <label for="licence-document">
+                            Upload Pharmacy Licence *
+                        </label>
+
+                        <div class="upload-box">
+
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                            <strong>Upload licence document</strong>
+
+                            <span>PDF, JPG or PNG · Maximum 5 MB</span>
+
+                            <input type="file"
+                                id="licence-document"
+                                accept=".pdf,.jpg,.jpeg,.png"
+                                required>
+
+                        </div>
+
+                        <p id="file-name" class="file-name">
+                            No document selected.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECTION 5 -->
+
+            <div class="registration-section">
+
+                <div class="section-title">
+
+                    <span class="section-number">05</span>
+
+                    <div>
+                        <h2>Create your account</h2>
+                        <p>Set up your pharmacy login credentials.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group full-width">
+
+                        <label for="account-email">
+                            Login Email Address *
+                        </label>
+
+                        <input type="email"
+                            id="account-email"
+                            placeholder="Enter login email"
+                            autocomplete="username"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="new-password">
+                            Create Password *
+                        </label>
+
+                        <div class="form-input">
+
+                            <input type="password"
+                                id="new-password"
+                                placeholder="Minimum 8 characters"
+                                minlength="8"
+                                autocomplete="new-password"
+                                required>
+
+                            <button type="button"
+                                class="password-toggle"
+                                data-target="new-password"
+                                aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="confirm-password">
+                            Confirm Password *
+                        </label>
+
+                        <div class="form-input">
+
+                            <input type="password"
+                                id="confirm-password"
+                                placeholder="Re-enter password"
+                                minlength="8"
+                                autocomplete="new-password"
+                                required>
+
+                            <button type="button"
+                                class="password-toggle"
+                                data-target="confirm-password"
+                                aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TERMS -->
+
+            <div class="terms-section">
+
+                <label class="checkbox-label">
+
+                    <input type="checkbox" id="terms" required>
+
+                    <span>
+                        I confirm that the information provided is
+                        accurate and that I am authorised to register
+                        this pharmacy.
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <button type="submit" class="auth-submit registration-submit">
+
+                Submit Pharmacy Registration
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+            <div id="registration-message"
+                class="form-message"
+                role="status"
+                aria-live="polite">
+            </div>
+
+
+            <div class="verification-note">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <div>
+
+                    <strong>Verification before activation</strong>
+
+                    <p>
+                        Your submitted information will undergo
+                        initial validation and administrative review.
+                        Your pharmacy will appear in MediNear searches
+                        only after approval.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <footer class="auth-footer">
+
+        © 2026 MediNear. All rights reserved.
+
+    </footer>
+
+
+    <script src="auth.js"></script>
+
+</body>
+</html>
